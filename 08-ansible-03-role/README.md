@@ -32,7 +32,7 @@
 https://github.com/wonderphp/ansible-playbooks/tree/master/playbook/playbook2  
 https://github.com/wonderphp/kibana-role  
 https://github.com/wonderphp/elastic-role  
-
+ 
 ## Необязательная часть
 
 1. Проделайте схожие манипуляции для создания роли logstash.
