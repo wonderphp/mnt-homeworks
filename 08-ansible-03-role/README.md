@@ -28,7 +28,10 @@
 8. Добавьте roles в `requirements.yml` в playbook.
 9. Переработайте playbook на использование roles.
 10. Выложите playbook в репозиторий.
-11. В ответ приведите ссылки на оба репозитория с roles и одну ссылку на репозиторий с playbook.
+11. В ответ приведите ссылки на оба репозитория с roles и одну ссылку на репозиторий с playbook.  
+https://github.com/wonderphp/ansible-playbooks/tree/master/playbook/playbook2  
+https://github.com/wonderphp/kibana-role  
+https://github.com/wonderphp/elastic-role  
 
 ## Необязательная часть
 
