@@ -1,0 +1,10 @@
+node_hwmon_temp_celsius{chip="platform_coretemp_0",sensor="temp1"}
+node_filesystem_free_bytes{device="/dev/sde2",fstype="ext4",mountpoint="/"}
+
+node_md_disks{device="md126"} 2
+
+node_md_disks_active{device="md126"} 2
+
+node_systemd_unit_state{name="smbd.service",state="active",type="notify"} 
+
+node_systemd_unit_state{name="apache2.service",state="active",type="forking"}
