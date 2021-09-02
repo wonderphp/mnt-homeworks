@@ -52,13 +52,18 @@
   * node_filesystem_free_bytes{device="/dev/sde2",fstype="ext4",mountpoint="/"}
 
 Для решения данного ДЗ приведите promql запросы для выдачи этих метрик, а также скриншот получившейся Dashboard.
+
 Ответ:
 <img src='dash.jpg'>
 ## Задание 3
 Создайте для каждой Dashboard подходящее правило alert (можно обратиться к первой лекции в блоке "Мониторинг").
 
-Для решения ДЗ - приведите скриншот вашей итоговой Dashboard.
-
+Для решения ДЗ - приведите скриншот вашей итоговой Dashboard.  
+Ответ:  
+<img src='alerts.jpg'>  
+<img src='dash.jpg'>  
+<img src='grafana1.jpg'>  
+<img src='grafana2.jpg'>  
 ## Задание 4
 Сохраните ваш Dashboard.
 
@@ -68,6 +73,7 @@
 
 В решении задания - приведите листинг этого файла.
 
+<a href='dash.json'>dash.json</a>
 ---
 
 ### Как оформить ДЗ?
