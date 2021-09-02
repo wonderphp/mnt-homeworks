@@ -41,7 +41,7 @@
 
 Создайте Dashboard и в ней создайте следующие Panels:
 - Утилизация CPU для nodeexporter (в процентах, 100-idle)
-  * 100 - (avg by (instance) (rate(node_cpu_seconds_total{job="node",mode="idle"}[1m])) * 100)
+  * avg by (instance) (rate(node_cpu_seconds_total{job="node",mode="idle"}[1m])) * 100
 - CPULA 1/5/15
   * 100 - (avg by (instance) (rate(node_cpu_seconds_total{job="node",mode="idle"}[1m])) * 100)
   * 100 - (avg by (instance) (rate(node_cpu_seconds_total{job="node",mode="idle"}[5])) * 100)
