@@ -1,3 +1,5 @@
+Этот файл для меня, черновик
+
 node_hwmon_temp_celsius{chip="platform_coretemp_0",sensor="temp1"}
 node_filesystem_free_bytes{device="/dev/sde2",fstype="ext4",mountpoint="/"}
 
