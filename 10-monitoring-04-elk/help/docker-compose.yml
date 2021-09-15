@@ -64,12 +64,12 @@ services:
       - es-warm
 
   logstash:
-    image: docker.elastic.co/logstash/logstash:6.3.2
+    image: docker.elastic.co/logstash/logstash:7.14.1
     container_name: logstash
     ports:
-      - 5046:5046
+      - 5044:5044
     volumes:
-      - /home/pixel/elka/configs/logstash.conf:/etc/logstash/conf.d/logstash.confs
+      - /home/pixel/elka/configs/logstash.conf:/etc/logstash/conf.d/logstash.conf
       - /home/pixel/elka/configs/logstash.yml:/opt/logstash/config/logstash.yml
     networks:
       - elastic
