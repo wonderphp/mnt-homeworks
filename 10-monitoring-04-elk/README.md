@@ -80,8 +80,40 @@ Filebeat следует сконфигурировать для отправки
 	Сейчас за несколько минут распух до 3гб - и я все прервал. 
 	Возможно все так, потому что файлбит смотрит пути:
 	/var/lib/docker/containers/*/*.log
-	а это приводит к заLOOPливанию записей - случилось событие - его отловили - это тоже событитие - и опять по кругу...
+	а это приводит к заLOOPливанию записей - случилось событие - его отловили - это тоже событитие - и опять по кругу... 
 	
+		поменял в docer-compose.yml сроки на
+		logstash:
+		image: docker.elastic.co/logstash/logstash:6.3.2
+		container_name: logstash
+		ports:
+		  - 5046:5046
+		volumes:
+		  - ./configs/logstash.conf:/etc/logstash/conf.d/logstash.conf:Z
+		  - ./configs/logstash.yml:/opt/logstash/config/logstash.yml:Z
+		networks:
+		  - elastic
+	и
+			filebeat:
+		image: "docker.elastic.co/beats/filebeat:7.2.0"
+		container_name: filebeat
+		privileged: true
+		user: root
+		volumes:
+		  - ./configs/filebeat.yml:/usr/share/filebeat/filebeat.yml:Z
+		  - /var/lib/docker:/var/lib/docker:Z
+		  - /var/run/docker.sock:/var/run/docker.sock:Z
+		networks:
+		  - elastic
+			#ipv4_address: 172.23.0.33
+		depends_on:
+		  - logstash
+	  
+	  в секции логсташ:
+	  
+		  output.logstash:
+			hosts: ["172.23.0.4:5044", "172.23.0.5:5044"]
+			
 	индекс logstash- не появлися, пока не понял куда копать... получается логсташ не передеает в эластик...
 	
 	манускрпты пока не переварил, сдаю что есть. Може будет коментарий такой, что наведет меня на фикс.
