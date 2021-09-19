@@ -31,7 +31,9 @@
 - logstash
 - kibana
 - filebeat
+
 	<img src='docker-up.jpg'>
+	
 и связать их между собой.
 
 Logstash следует сконфигурировать для приёма по tcp json сообщений.
