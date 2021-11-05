@@ -12,6 +12,7 @@
 ![взял](aragast.jpg "взял")
 ![ждем](docker-pull.jpg "берется, ждем")
 7. Обязательный параметр: поставить label для динамических агентов: `ansible_docker`
+![ok](label.jpg "ok")
 8.  Сделать форк репозитория с [playbook](https://github.com/aragastmatb/example-playbook)
 (https://github.com/wonderphp/example-playbook)
 ## Основная часть
